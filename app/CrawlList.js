@@ -78,7 +78,7 @@ let ParseTable = async (outputArray = [], baseURL) => {
 
     await CrawlItem(itemURL, output)
     //回覆
-    output['dc.description'] = $html.find('#block-system-main > div > div.content.node-reference > div > table > tbody > tr:nth-child(4) > td > div > div').html()
+    ///output['dc.description'] = $html.find('#block-system-main > div > div.content.node-reference > div > table > tbody > tr:nth-child(4) > td > div > div').html()
 
 
     // =================================================================
