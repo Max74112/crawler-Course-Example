@@ -48,6 +48,8 @@ let ParseTable = async (outputArray = [], baseURL) => {
     // =================================================================
     // @TODO 3. 取得ID
     // 請修改此處以抓取正確的資訊。
+    output['dc.title'] = eleTr.find('td:eq(1)').html()
+    output['dc.title'] = StripHTML(output['dc.title'])
 
     let itemURL = eleTr.find('td a[href]').attr('href')
     itemURL = ResolveFullURL(baseURL, itemURL)
