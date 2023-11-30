@@ -31,7 +31,8 @@ let CrawlItemPage = async (baseURL = 'https://catweb.ncl.edu.tw/QandA/page/31939
 
   // 將回覆儲存到dc.description
   outputItem['dc.description'] = $html.find('#block-system-main > div > div.content.node-reference > div > table > tbody > tr:nth-child(4) > td > div > div').html()
-  
+  //挑戰
+  outputItem['dc.description'] = $html.find('#block-system-main > div > div.content.node-reference > div > table > tbody > tr:nth-child(3) > td > div > div > div > a').html()
   // =================================================================
 
   Object.keys(outputItem).forEach(key => output[key] = outputItem[key])
